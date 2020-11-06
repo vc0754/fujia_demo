@@ -16,7 +16,6 @@ return [
         'app_id' => 'wx1317a8978145f5f6',
         'app_secret' => '18e5ea0b31429fa4a513ffc1b2d71c18',
     ],
-
 //    'app_id' => '', //线上
 //    'app_secret' => '',
     'login_url'=>'https://api.weixin.qq.com/sns/jscode2session?appid=%s&secret=%s&js_code=%s&grant_type=authorization_code',
