@@ -53,7 +53,7 @@ class CcbWxPay implements PayContract
         $postData['PROINFO'] = '';
         $postData['REFERER'] = '';
         $postData['TRADE_TYPE'] = 'MINIPRO';
-        $postData['SUB_APPID'] = config('wxmini.th.app_id');
+        $postData['SUB_APPID'] = config('wxmini.fj.app_id');
         $postData['SUB_OPENID'] = $openID;
 
         $str = '';

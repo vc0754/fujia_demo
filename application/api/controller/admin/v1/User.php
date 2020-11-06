@@ -159,8 +159,8 @@ class User extends Controller
      * @auth('公众号管理登录','管理员')
      */
     public function wxmpFreeLogin(){
-        $data['user_name'] = 'tianhuan';
-        $data['password'] = 'tianhuan075420200808';
+        $data['user_name'] = 'fujia';
+        $data['password'] = 'fujia123';
         if(!cache('wq_auth_token')){
             $data['token'] = md5(mt_rand(100000,999999));
             cache('wq_auth_token',$data['token'],86400);

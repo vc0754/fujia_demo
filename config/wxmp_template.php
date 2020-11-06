@@ -11,7 +11,7 @@ return[
         'touser' => '',
         'template_id' => '',
         'miniprogram'=>[
-            'appid'=> config('wxmini.th.app_id'),
+            'appid'=> config('wxmini.fj.app_id'),
             'pagepath'=>''
         ],
         'data' => [

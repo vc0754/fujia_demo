@@ -38,9 +38,9 @@ class ThirdWxPay implements PayContract
     public function setApplication($applicationId){
 
         if($applicationId == ApplicationEnum::FU_JIA){
-            $this->app_id = config('wxmini.th.app_id');
-            $this->mchid = config('thirdwxpay.th.mchid');
-            $this->paykey = config('thirdwxpay.th.paykey');
+            $this->app_id = config('wxmini.fj.app_id');
+            $this->mchid = config('thirdwxpay.fj.mchid');
+            $this->paykey = config('thirdwxpay.fj.paykey');
         }
 
 
@@ -293,9 +293,9 @@ class ThirdWxPay implements PayContract
     }
 
     private function setDefaultConfig(){
-        $this->app_id = $this->app_id ?:config('wxmini.th.app_id');
-        $this->mchid = $this->mchid ?: config('thirdwxpay.th.mchid');
-        $this->paykey = $this->paykey ?: config('thirdwxpay.th.paykey');
+        $this->app_id = $this->app_id ?:config('wxmini.fj.app_id');
+        $this->mchid = $this->mchid ?: config('thirdwxpay.fj.mchid');
+        $this->paykey = $this->paykey ?: config('thirdwxpay.fj.paykey');
     }
 
 //    public function queryRefundOrder($dynamicID, $orderID, $refundLog)

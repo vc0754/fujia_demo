@@ -13,8 +13,8 @@ return [
 //    'app_id' => 'wx30b6abea31bc62c6', //开发(ZL)
 //    'app_secret' => '97c5812dc01adbffa66e736a0ffc53ac',
     'fj'=> [
-        'app_id' => '',
-        'app_secret' => '',
+        'app_id' => 'wx1317a8978145f5f6',
+        'app_secret' => '18e5ea0b31429fa4a513ffc1b2d71c18',
     ],
 
 //    'app_id' => '', //线上

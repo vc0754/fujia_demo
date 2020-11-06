@@ -43,8 +43,8 @@ class Member
     {
         $this->applicationID = $applicationID;
         if($applicationID == ApplicationEnum::FU_JIA){
-            $this->wxAppID =  config('wxmini.th.app_id');
-            $this->wxAppSecret = config('wxmini.th.app_secret');
+            $this->wxAppID =  config('wxmini.fj.app_id');
+            $this->wxAppSecret = config('wxmini.fj.app_secret');
         }else{
           throw new ForbiddenException();
         }
