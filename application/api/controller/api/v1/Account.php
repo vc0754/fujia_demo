@@ -9,7 +9,6 @@
 namespace app\api\controller\api\v1;
 
 
-use app\lib\enum\HeartStatus;
 use app\lib\exception\common\HandleException;
 use app\lib\token\Token;
 use think\Exception;
