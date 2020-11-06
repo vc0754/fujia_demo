@@ -13,7 +13,7 @@ return [
 //    'app_id' => 'wx30b6abea31bc62c6', //开发(ZL)
 //    'app_secret' => '97c5812dc01adbffa66e736a0ffc53ac',
     'fj'=> [
-        'app_id' => '',
+        'app_id' => '11111',
         'app_secret' => '',
     ],
 
