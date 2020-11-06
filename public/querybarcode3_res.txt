@@ -1,0 +1,18 @@
+
+
+	{"RESULT":"N",
+	"ORDERID":"20082714063599937402",
+	"AMOUNT":"",
+	"WAITTIME":"",
+	"OPENID":"",
+		"SUB_OPENID":"",
+	"PAID_AMOUNT":"",
+	"RECEIPT_AMOUNT":"",
+	"COUPONARRAY":[],
+	"ERRCODE":"PAYERROR",
+	"ERRMSG":"微信返回状态PAYERROR:支付失败，请撤销订单",
+	"SIGN":""}
+
+
+
+
