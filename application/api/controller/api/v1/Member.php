@@ -39,6 +39,7 @@ class Member
     public function login(Request $request)
     {
         $code = $request->post('code');
+
         $token = app('member',['applicationID'=>$this->applicationID])->getToken($code);
 
         return show(200,$token,'ok');

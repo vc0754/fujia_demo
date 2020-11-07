@@ -19,9 +19,9 @@ class AppRoute
         $pattern = "/(http|https):\/\/(.*)/";
         preg_match($pattern,env('API_HOST'),$apiMatch);
         //preg_match($pattern,env('DINNING_API_HOST'),$dinningMatch);
+
         if($request->host() == $apiMatch[2]){
             $request->application_id = ApplicationEnum::FU_JIA;
-
         }else{
             throw new RouteNotFoundException();
         }
