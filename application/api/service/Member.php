@@ -111,7 +111,7 @@ class Member
         cache('SESSIONKEY'.$openid,$wxResult['session_key'],172800);
 
         $token = Token::getToken($member,true);
-        dump($token);die;
+
        return $token;
     }
     //刷新token
