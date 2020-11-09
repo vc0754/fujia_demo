@@ -346,22 +346,17 @@ class Member
         //查詢是否商户
         $customer = CustomerModel::where('mobile_phone',$mobile)->find();
         if($customer){
-            //查询合同状态
-//           $contract = ContractModel::where('customer_fid',$customer->fid)
-//                ->where('status',['=',ContractStatus::EXECUTING],['=',ContractStatus::WAITING_FINISH],'or')
-//               ->find();
-//           if($contract){
                $auth = AppAuthEnum::Customer;
                $authList[] =  AppAuthEnum::Customer;
-//           }
             $output['customer_id'] = $customer->id;
         }
 
         $staff = Staff::where('mobile',$mobile)->find();
         if($staff){
-            $auth = $auth + AppAuthEnum::Manager;
-            $authList[] = AppAuthEnum::Manager;
+            $auth = $auth + AppAuthEnum::Staff;
+            $authList[] = AppAuthEnum::Staff;
             $scope = 32;
+            $output['staff_id'] = $staff->id;
         }
 
         $output['auth'] = $auth;

@@ -98,7 +98,7 @@ class Auth
             $authArr = $this->getAuthNum($res['auth'],$lst);
             if(in_array($auth['auth'],$authArr)){
                 if($appID == ApplicationEnum::FU_JIA){
-                    if($auth['auth'] == AppAuthEnum::Manager){
+                    if($auth['auth'] == AppAuthEnum::Staff){
                         if($res['scope'] < $auth['scope']){
                             return false;
                         }

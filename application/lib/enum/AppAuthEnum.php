@@ -16,5 +16,5 @@ class AppAuthEnum
 {
     const Customer = 1; //客户
 
-    const Manager = 2;  //抄表人员
+    const Staff = 2;  //抄表人员
 }
