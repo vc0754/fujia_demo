@@ -63,6 +63,7 @@ Route::group('', function () {
 
 
             });
+            
             //endregion
             //region 账单
             Route::group('account',function(){
@@ -127,5 +128,5 @@ Route::group('', function () {
             });
         });
 
-    })->middleware(['AppAuth:fu_jia']);
+    })->middleware(['AppAuth']);
 })->middleware(['ReflexValidate'])->allowCrossDomain();//->domain('api');

@@ -98,6 +98,7 @@ Route::group('', function () {
                 // 设置小程序用户真实姓名
                 Route::put('set_name/:id', 'api/admin.v1.Member/setRealName');
             });
+            
             //endregion
             //region 文章管理
             Route::group('article', function () {

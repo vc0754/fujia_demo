@@ -30,11 +30,11 @@ class AppAuth
     public function handle($request, \Closure $next,$applicationName)
     {
 
-        if($applicationName == 'fu_jia') {
+        // if($applicationName == 'fu_jia') {
             $appID = ApplicationEnum::FU_JIA;
-        }else{
-            // throw new Exception();
-        }
+        // }else{
+        //     throw new Exception();
+        // }
         $auth =  (new Permission($request))->check($appID);
         if (!$auth) {
             $openID = Token::getCurrentWxOpenID($appID);

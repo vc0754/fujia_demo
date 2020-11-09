@@ -48,8 +48,10 @@ Route::group('', function () {
             Route::group('member', function () {
                 // 颁布小程序令牌
                 Route::post('login', 'api/api.v1.Member/login');
+
                 // 获取用户微信信息
                 Route::post('info','api/api.v1.Member/getUserInfo');
+                
                 // 获取微信绑定手机号码
                 Route::post('phone','api/api.v1.Member/getPhoneNumber');
                 // 刷新小程序令牌
@@ -66,8 +68,10 @@ Route::group('', function () {
                 Route::get('check_attention', 'api/api.v1.Member/checkAuthorizeAttention');
                 // 获取员工信息
                 //Route::get('staff','api/api.v1.Member/getStaffInfo');
-            })->middleware(['AppRoute','AppAuth:fu_jia']);
+            })->middleware(['AppRoute','AppAuth']);
         });
+
+        
     });
 })->middleware(['ReflexValidate'])->allowCrossDomain();
 
