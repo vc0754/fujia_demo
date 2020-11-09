@@ -692,7 +692,7 @@ class Client
      */
     public function getReceipt(Request $request){
         $params = $request->get();
-
+        
         $arrWhere = [];
         //商户姓名
         if(isset($params['name'])){

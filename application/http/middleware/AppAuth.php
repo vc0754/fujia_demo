@@ -33,7 +33,7 @@ class AppAuth
         if($applicationName == 'fu_jia') {
             $appID = ApplicationEnum::FU_JIA;
         }else{
-            throw new Exception();
+            // throw new Exception();
         }
         $auth =  (new Permission($request))->check($appID);
         if (!$auth) {

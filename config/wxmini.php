@@ -12,6 +12,12 @@ return [
 
 //    'app_id' => 'wx30b6abea31bc62c6', //开发(ZL)
 //    'app_secret' => '97c5812dc01adbffa66e736a0ffc53ac',
+
+    'th' => [
+        'app_id' => 'wxe436ebefff9aad3d', //开发(VC)
+        'app_secret' => '010af0784b001ed261552e9f7b00d3ac',
+    ],
+    
     'fj'=> [
         'app_id' => '',
         'app_secret' => '',
