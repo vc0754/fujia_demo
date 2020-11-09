@@ -11,16 +11,13 @@ namespace app\api\service;
 use app\api\dto\account\Operator;
 use app\api\dto\account\PaymentDetails;
 use app\api\dto\account\Receivables;
-use app\api\dto\kingdee\Receivable;
-use app\api\dto\kingdee\Recharge;
+
 use app\api\model\BillDetail;
-use app\api\model\CardInfo;
+
 use app\api\model\ChargeType;
 use app\api\model\Customer;
-use app\api\model\CardInfo as CardInfoModel;
-use app\api\model\CardBill as CardBillModel;
-use app\api\dto\kingdee\ReceivableBill;
-use app\api\dto\kingdee\ReceivableDetails;
+
+
 use app\api\model\OnlineOrder;
 use app\api\model\Sysconfig;
 use app\lib\enum\OnlinePayType;

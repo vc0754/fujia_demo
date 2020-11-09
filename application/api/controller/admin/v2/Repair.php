@@ -1,7 +1,9 @@
 <?php
-namespace app\api\controller\admin\v1;
+namespace app\api\controller\admin\v2;
 
+use app\api\model\Bill;
 use app\api\model\RepairApplication;
+use app\api\model\Member;
 use app\lib\enum\RepairStatus;
 use app\lib\exception\common\ParameterException;
 use app\api\model\Housing;
@@ -70,6 +72,7 @@ class Repair
 
             foreach ($tempRes['data'] as $key=>$value){
                 $tempRes['data'][$key]['repair_unit'] =  isset($housingEnum[$value['repair_unit']]) ? $housingEnum[$value['repair_unit']] : '';
+                $tempRes['data'][$key]['paid_price'] = $value['status'] >= RepairStatus::WAIT_PAID && $value['quoted_price'] > 0 ? $value['quoted_price'] : 0;
             }
 
         }
@@ -78,7 +81,7 @@ class Repair
     }
 
     /**
-     * 处理报修信息
+     * 报修指派
      * @auth('报修派单','报修管理')
      * @validate('ProcessingRepair')
      * @param Request $request
@@ -88,9 +91,15 @@ class Repair
     public function processingRepair(Request $request){
         $params = $request->put();
         $params['id'] = input('rid');
+        $obj = Member::get($params['member_id']);
+        if(!$obj){
+            throw new ParameterException(['msg'=>'找不到维修工信息']);
+        }
+        $params['member_id'] = $obj->id;
+        $params['staff'] = $obj->real_name ?: $obj->nick_name;
+        $params['staff_phone'] = $obj->mobile;
 
         RepairApplication::processing($params);
-
         return show(201,'','update repair success');
     }
 

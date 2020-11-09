@@ -12,7 +12,6 @@ namespace app\lib\appAuth;
 
 use app\lib\enum\AppAuthEnum;
 use app\lib\enum\ApplicationEnum;
-use app\lib\enum\DinningAuthEnum;
 use app\lib\enum\ScopeEnum;
 use app\lib\exception\token\ForbiddenException;
 use app\lib\token\Token;

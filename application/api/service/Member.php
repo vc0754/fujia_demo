@@ -13,6 +13,7 @@ namespace app\api\service;
 use app\api\model\Customer as CustomerModel;
 use app\api\model\MemberPhone;
 use app\api\model\Staff as StaffModel;
+use app\api\model\Staff;
 use app\api\model\WechatFans;
 use app\lib\enum\AppAuthEnum;
 use app\lib\enum\ApplicationEnum;
@@ -356,17 +357,10 @@ class Member
             $output['customer_id'] = $customer->id;
         }
 
-        $member = MemberModel::where('mobile',$mobile)->where('application_id',ApplicationEnum::FU_JIA)->find();
-        if($member){
-            if($member->is_manager){
-                $auth = $auth + AppAuthEnum::Manager;
-                $authList[] = AppAuthEnum::Manager;
-                $scope = $member->scope;
-            }
-            if($member->is_maintainer){
-                $auth = $auth + AppAuthEnum::Maintainer;
-                $authList[] = AppAuthEnum::Maintainer;
-            }
+        $staff = Staff::where('mobile',$mobile)->find();
+        if($staff){
+            $auth = $auth + AppAuthEnum::Manager;
+            $scope = 32;
         }
 
         $output['auth'] = $auth;
