@@ -1,0 +1,4929 @@
+{
+	"info": {
+		"_postman_id": "3a9cc99e-5141-459c-8036-da766468e7d6",
+		"name": "富佳物业",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "后台前端接口",
+			"item": [
+				{
+					"name": "权限管理",
+					"item": [
+						{
+							"name": "查询当前用户/角色拥有权限",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTgzMjAwMDA3LCJleHAiOjE1ODMyMDcyMDcsInVzZXIiOnsiaWQiOjMsIm5pY2tuYW1lIjpudWxsLCJlbWFpbCI6IiIsImFkbWluIjoxLCJhY3RpdmUiOjEsImdyb3VwX2lkIjoxLCJjcmVhdGVfdGltZSI6IjIwMjAtMDMtMDIgMTU6MzA6NDciLCJhdmF0YXIiOm51bGwsInVzZXJuYW1lIjoieXV4aWFuZyIsIm9yZ2FuaXphdGlvbl9pZCI6MiwibWVtYmVyX2lkIjpudWxsfX0.xYD2ET0fByjFhCd0nE0eGlV8PPhJm10sB6FwFSeu_LI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/user/auths",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"user",
+										"auths"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询所有权限组",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTgzMjAwMDA3LCJleHAiOjE1ODMyMDcyMDcsInVzZXIiOnsiaWQiOjMsIm5pY2tuYW1lIjpudWxsLCJlbWFpbCI6IiIsImFkbWluIjoxLCJhY3RpdmUiOjEsImdyb3VwX2lkIjoxLCJjcmVhdGVfdGltZSI6IjIwMjAtMDMtMDIgMTU6MzA6NDciLCJhdmF0YXIiOm51bGwsInVzZXJuYW1lIjoieXV4aWFuZyIsIm9yZ2FuaXphdGlvbl9pZCI6MiwibWVtYmVyX2lkIjpudWxsfX0.xYD2ET0fByjFhCd0nE0eGlV8PPhJm10sB6FwFSeu_LI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/manager/group/all",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"manager",
+										"group",
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询一个权限组及其权限",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTg0NzczODMzLCJleHAiOjE1ODUzNzg2MzMsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjpudWxsLCJlbWFpbCI6IjM3Njc2NzA4OUBxcS5jb20iLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6bnVsbCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjpudWxsLCJ1c2VybmFtZSI6InN1cGVyIiwib3JnYW5pemF0aW9uX2lkIjotMSwibWVtYmVyX2lkIjpudWxsfX0.LQU2eKMibJgxKxe-plcDP-StELq8KyOrITsw4iIpvVA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/manager/group/1",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"manager",
+										"group",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除一个权限组",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTgzMjAwNDE1LCJleHAiOjE1ODMyMDc2MTUsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjpudWxsLCJlbWFpbCI6IjM3Njc2NzA4OUBxcS5jb20iLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6bnVsbCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjpudWxsLCJ1c2VybmFtZSI6InN1cGVyIiwib3JnYW5pemF0aW9uX2lkIjotMSwibWVtYmVyX2lkIjpudWxsfX0.QaS2JEZQCUQP1LrSTeUUx-ZHeuRpAj9vncSvHpWfJZY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/manager/group/1",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"manager",
+										"group",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "更新一个权限组",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTgzMjAwNDE1LCJleHAiOjE1ODMyMDc2MTUsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjpudWxsLCJlbWFpbCI6IjM3Njc2NzA4OUBxcS5jb20iLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6bnVsbCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjpudWxsLCJ1c2VybmFtZSI6InN1cGVyIiwib3JnYW5pemF0aW9uX2lkIjotMSwibWVtYmVyX2lkIjpudWxsfX0.QaS2JEZQCUQP1LrSTeUUx-ZHeuRpAj9vncSvHpWfJZY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/manager/group/1",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"manager",
+										"group",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询所有可分配的权限",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/manager/authority",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"manager",
+										"authority"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "新建权限组",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk0ODY2MDMzLCJleHAiOjE1OTU0NzA4MzMsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjU1MDBcL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.xjOIAylqaPWEpibzr-TdJxQUX7fA9DPyWwZ1M9H_okI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\":\"市场管理员\",\n\t\"info\":\"负责市场业务\",\n\t\"auths\":[]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/manager/group",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"manager",
+										"group"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除多个权限",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTgzMjAwNDE1LCJleHAiOjE1ODMyMDc2MTUsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjpudWxsLCJlbWFpbCI6IjM3Njc2NzA4OUBxcS5jb20iLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6bnVsbCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjpudWxsLCJ1c2VybmFtZSI6InN1cGVyIiwib3JnYW5pemF0aW9uX2lkIjotMSwibWVtYmVyX2lkIjpudWxsfX0.QaS2JEZQCUQP1LrSTeUUx-ZHeuRpAj9vncSvHpWfJZY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"group_id\":1,\r\n\t\"auths\": [\r\n\t\t\"删除教师\",\r\n\t\t\"教师列表\",\r\n\t\t\"教师详情\",\r\n\t\t\"添加教师\"\r\n\t\t]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/manager/remove",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"manager",
+										"remove"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加多个权限",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTgzMjAwNDE1LCJleHAiOjE1ODMyMDc2MTUsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjpudWxsLCJlbWFpbCI6IjM3Njc2NzA4OUBxcS5jb20iLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6bnVsbCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjpudWxsLCJ1c2VybmFtZSI6InN1cGVyIiwib3JnYW5pemF0aW9uX2lkIjotMSwibWVtYmVyX2lkIjpudWxsfX0.QaS2JEZQCUQP1LrSTeUUx-ZHeuRpAj9vncSvHpWfJZY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"group_id\":1,\n\t\"auths\": [\n\n\t\t]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/manager/dispatch/patch",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"manager",
+										"dispatch",
+										"patch"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "系统配置",
+					"item": [
+						{
+							"name": "获取系统配置",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/sysconfig",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"sysconfig"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "超管密码验证",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"yuxiang\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/user/super_password_valid",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"user",
+										"super_password_valid"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "上传文件",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MzMzMDI0LCJleHAiOjE1OTU5Mzc4MjQsInVzZXIiOnsiaWQiOjQsIm5pY2tuYW1lIjoiXHU1OTI5XHU3M2FmXHU3YmExXHU3NDA2IiwiZW1haWwiOiIiLCJhZG1pbiI6MSwiYWN0aXZlIjoxLCJncm91cF9pZCI6MSwiY3JlYXRlX3RpbWUiOiIyMDIwLTA2LTA0IDE3OjA2OjA5IiwiYXZhdGFyIjpudWxsLCJ1c2VybmFtZSI6InRpYW5odWFuIn19.yLovBsmatoAw3vbGK49Qsbw0S2GK5bn2aaEsbpCz-Eg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/E:/素材/2.png"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/file",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"file"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "系统配置",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk5MDk5Nzg5LCJleHAiOjE1OTk3MDQ1ODksInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvMTkyLjE2OC4zLjIxMjo1NTAwXC91cGxvYWRzXC8yMDIwMDYwNlwvZTY2MGQ1OGEyODhjMTFiNDhhYzZlZTNjNWZiYTdkNmIuanBnIiwidXNlcm5hbWUiOiJzdXBlciJ9fQ.5m3S-of_YMnCeZSwQPUiZMe5uwEebLOE4bbGmLdaviM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"field\":\"bill_generate_period\",\r\n    \"value\": \"month\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/sysconfig",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"sysconfig"
+									]
+								},
+								"description": "\"pay_channels\" ->  string \"CCB\" | \"Third\"\r\n\r\n\"balance_warning\" -> int  \r\n\r\n\"machine_unit_times\" -> int\r\n\r\n\"machine_default_price\" -> decimal\r\n\r\n\"machine_pay_switch\" -> tinyint   0 | 1"
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "32e32c7d-abc7-4634-9cb8-6040fe0801e3",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "90d43858-74bf-4536-b161-9147b245c755",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "登录与用户",
+					"item": [
+						{
+							"name": "令牌刷新",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a93bbd70-20d8-44b7-a31d-ebf4f5ae0b3c",
+										"exec": [
+											"/**",
+											" *鉴于access_token有超时时间，而且为了安全，access_token的超时时间不能过于太长，所以参照auth2.0 的 refresh token机制，这里也添加一个refresh token来讲access_token进行刷新，超时时间为7天",
+											" *如刷新也过期需重新授权",
+											" *详情了了解https://blog.csdn.net/u011085172/article/details/85337972?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task",
+											" */"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsaW4tY21zLXRwNSIsImlhdCI6MTU4Mjg1NjEwNiwiZXhwIjoxNTgyODU2MTE2LCJ1c2VyIjp7ImlkIjoxfX0.SiSA_kxilPLSAngeaAflzWRgJ71G2YqwkxoTsodgcJY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/user/refresh",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"user",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改自己密码",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTgzMjAwMDA3LCJleHAiOjE1ODMyMDcyMDcsInVzZXIiOnsiaWQiOjMsIm5pY2tuYW1lIjpudWxsLCJlbWFpbCI6IiIsImFkbWluIjoxLCJhY3RpdmUiOjEsImdyb3VwX2lkIjoxLCJjcmVhdGVfdGltZSI6IjIwMjAtMDMtMDIgMTU6MzA6NDciLCJhdmF0YXIiOm51bGwsInVzZXJuYW1lIjoieXV4aWFuZyIsIm9yZ2FuaXphdGlvbl9pZCI6MiwibWVtYmVyX2lkIjpudWxsfX0.xYD2ET0fByjFhCd0nE0eGlV8PPhJm10sB6FwFSeu_LI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/user/change_password",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"user",
+										"change_password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询所有用户",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTg0NjkyMzA4LCJleHAiOjE1ODUyOTcxMDgsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjpudWxsLCJlbWFpbCI6IjM3Njc2NzA4OUBxcS5jb20iLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6bnVsbCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjpudWxsLCJ1c2VybmFtZSI6InN1cGVyIiwib3JnYW5pemF0aW9uX2lkIjotMSwibWVtYmVyX2lkIjpudWxsfX0.F4TBlREMBxc94jyy8vmvs7QoqKmmXcXOxRyBGbfIytM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/manager/users?count=2",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"manager",
+										"users"
+									],
+									"query": [
+										{
+											"key": "count",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除用户",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/manager/2",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"manager",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取当前用户信息",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/user/information",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"user",
+										"information"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "公众号免密登录",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/user/wxmp_free_login",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"user",
+										"wxmp_free_login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "登录与用户",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8c974e9a-8d8b-46bd-be77-0a798653e6a9",
+										"exec": [
+											"/**",
+											" *  token有效时常为2小时 ",
+											" */"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\":\"kf01\",\n\t\"password\":\"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/user/login",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "平台注册用户",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTg2MjYzNjA1LCJleHAiOjE1ODY4Njg0MDUsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjpudWxsLCJlbWFpbCI6IjM3Njc2NzA4OUBxcS5jb20iLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6bnVsbCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjpudWxsLCJ1c2VybmFtZSI6InN1cGVyIiwib3JnYW5pemF0aW9uX2lkIjotMSwibWVtYmVyX2lkIjpudWxsfX0.lmdu5RjbztVcGpfynagg1Aw3swB4uAuBM3w7B0g2RPI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n \"password\":123456,\n \"confirm_password\":123456,\n \"nickname\":\"宇翔前台1\",\n \"username\":\"yuxiangqt\",\n \"group_id\":6,\n \"organization_id\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/user/register",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "超管修改用户密码",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t \"new_password\":\"123456\",\n\t \"confirm_password\": \"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/manager/password/4",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"manager",
+										"password",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "更新用户信息",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTg5ODUzMDI5LCJleHAiOjE1OTA0NTc4MjksInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIzNzY3NjcwODlAcXEuY29tIiwiYWRtaW4iOjIsImFjdGl2ZSI6MSwiZ3JvdXBfaWQiOm51bGwsImNyZWF0ZV90aW1lIjoiMjAyMC0wMi0yOCAwOTo1MDozNiIsImF2YXRhciI6Imh0dHA6XC9cL2x6LmFwaS55dXhpYW5neHguY29tXC91cGxvYWRzXC8yMDIwMDQxNFwvYTFhZjk4YzIxOGU4MjhhODZmM2Q1NWYzMmFmODBjZDQuanBnIiwidXNlcm5hbWUiOiJzdXBlciIsIm9yZ2FuaXphdGlvbl9pZCI6LTEsImJ5X29yZ2FuaXphdGlvbiI6MH19.0uTrCjhfBP1S3NoEzFH5v0ztlqaL_jt5qw_FNV_I75o",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"uid\":2,\n\t\"email\":\"10000@qq.com\",\n\t\"group_id\":\"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/manager/2",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"manager",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "更新用户头像",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"avatar\":\"20200410/e9b213051b5ff4cc86325daf2dc9f7df.jpg\"\n\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/user/avatar",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"user",
+										"avatar"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "商户管理",
+					"item": [
+						{
+							"name": "商户水电余额流水明细",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk2NTkwODEyLCJleHAiOjE1OTcxOTU2MTIsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvdGguYXBpLnl1eGlhbmd4eC5jb21cL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.9FjY8GuaNVC6KjPD0NgQTa74ajWN_fWogEndBghqoRk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/customer/balance/4a1881a6d3ab11ea9d9f99839a246267",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"customer",
+										"balance",
+										"4a1881a6d3ab11ea9d9f99839a246267"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取商户账单流水",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk2NTkwODEyLCJleHAiOjE1OTcxOTU2MTIsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvdGguYXBpLnl1eGlhbmd4eC5jb21cL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.9FjY8GuaNVC6KjPD0NgQTa74ajWN_fWogEndBghqoRk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/customer/bill_flow?id=6aea9548d30d11eab24e959db515bfec&page=1&size=15&start_date=2020-07-01&end_date=2020-08-01&type=1",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"customer",
+										"bill_flow"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6aea9548d30d11eab24e959db515bfec",
+											"description": "商户id"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "页码"
+										},
+										{
+											"key": "size",
+											"value": "15",
+											"description": "条数"
+										},
+										{
+											"key": "start_date",
+											"value": "2020-07-01",
+											"description": "开始日期：默认当天"
+										},
+										{
+											"key": "end_date",
+											"value": "2020-08-01",
+											"description": "结束日期：默认当天"
+										},
+										{
+											"key": "type",
+											"value": "1",
+											"description": "1 商户缴费;2 余额充值;3余额退款 ;4 水卡充值;5 水卡退款"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "商户账单流水查询备注（商户缴费类型的详情）",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/customer/bill_flow_remark/a49549a00ec711eb8ffb00e0707ca7dd",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"customer",
+										"bill_flow_remark",
+										"a49549a00ec711eb8ffb00e0707ca7dd"
+									],
+									"query": [
+										{
+											"key": "receiptHeader",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取商户的表枚举集合",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "商户列表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/customer?page=1&size=15",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"customer"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "15"
+										},
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取客户的合同列表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk4OTMwMDY1LCJleHAiOjE1OTk1MzQ4NjUsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cHM6XC9cL2FwaS50aWFuaHVhbjA3NTQuY29tXC91cGxvYWRzXC8yMDIwMDYwNlwvZTY2MGQ1OGEyODhjMTFiNDhhYzZlZTNjNWZiYTdkNmIuanBnIiwidXNlcm5hbWUiOiJzdXBlciJ9fQ.Rx-PFhAs71Hh6RgtfWLxTt_DvyLEGXKE3uQDe1PnZQ4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/customer/contracts/0ef6947ae38011eab8019fc4043759c1",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"customer",
+										"contracts",
+										"0ef6947ae38011eab8019fc4043759c1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "区域管理",
+					"item": [
+						{
+							"name": "查询房源区域列表",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/housing/area",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"housing",
+										"area"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询房源列表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/housing?name=铺面&state=1&parent_fid=1031",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"housing"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "铺面"
+										},
+										{
+											"key": "state",
+											"value": "1"
+										},
+										{
+											"key": "parent_fid",
+											"value": "1031"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "故障报修",
+					"item": [
+						{
+							"name": "查询报修列表_FJ",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk2MDAwOTI3LCJleHAiOjE1OTY2MDU3MjcsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvdGguYXBpLnl1eGlhbmd4eC5jb21cL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.IFasnjfg9yN5tlAE3GQ2TpmXTf3WS7ohxP4gvW8iHLA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/repair?status=1&repair_type=1&start_date=111111111",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"repair"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "1"
+										},
+										{
+											"key": "repair_type",
+											"value": "1"
+										},
+										{
+											"key": "start_date",
+											"value": "111111111"
+										},
+										{
+											"key": "end_date",
+											"value": "111222222",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "确认报修信息完成",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/repair/complete/1db073dec67311ea8589f72887c70d11",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"repair",
+										"complete",
+										"1db073dec67311ea8589f72887c70d11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "处理报修信息",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNjAzNDM4NjM1LCJleHAiOjE2MDQwNDM0MzUsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvd3d3LnRpYW5odWFuLmNvbVwvdXBsb2Fkc1wvMjAyMDA2MDZcL2U2NjBkNThhMjg4YzExYjQ4YWM2ZWUzYzVmYmE3ZDZiLmpwZyIsInVzZXJuYW1lIjoic3VwZXIifX0.JWREZwzUb53sh-YVkp7_N7_kO3Imhbeh7gvoAkQyYl0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"member_id\": 100004\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/repair/processing/3e8f92700abf11eb9ea2799af28a30d9",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"repair",
+										"processing",
+										"3e8f92700abf11eb9ea2799af28a30d9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "取消报修",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk4NjY4ODk5LCJleHAiOjE1OTkyNzM2OTksInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cHM6XC9cL2FwaS50aWFuaHVhbjA3NTQuY29tXC91cGxvYWRzXC8yMDIwMDYwNlwvZTY2MGQ1OGEyODhjMTFiNDhhYzZlZTNjNWZiYTdkNmIuanBnIiwidXNlcm5hbWUiOiJzdXBlciJ9fQ.QeuAwEReNUqigWB9kesnC7vO8EvQr4QOrkjZPirP4xU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cancel_remark\":\"提交错了\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/repair/cancel/9c21e714e99811ea8491db822325c2e7",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"repair",
+										"cancel",
+										"9c21e714e99811ea8491db822325c2e7"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "合同管理",
+					"item": [
+						{
+							"name": "合同列表",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk4OTMwMDY1LCJleHAiOjE1OTk1MzQ4NjUsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cHM6XC9cL2FwaS50aWFuaHVhbjA3NTQuY29tXC91cGxvYWRzXC8yMDIwMDYwNlwvZTY2MGQ1OGEyODhjMTFiNDhhYzZlZTNjNWZiYTdkNmIuanBnIiwidXNlcm5hbWUiOiJzdXBlciJ9fQ.Rx-PFhAs71Hh6RgtfWLxTt_DvyLEGXKE3uQDe1PnZQ4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/contract?status=&page=1&sort_field=&sort_type=&size=15&page=1&bill_no=035",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"contract"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": ""
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "bill_no",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "15",
+											"disabled": true
+										},
+										{
+											"key": "sort_field",
+											"value": ""
+										},
+										{
+											"key": "sort_type",
+											"value": ""
+										},
+										{
+											"key": "size",
+											"value": "15"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "bill_no",
+											"value": "035"
+										}
+									]
+								},
+								"description": "status : 1|2|3|4|5|6 \r\n\r\nsort_field : bill_no | start_date | end_date\r\n\r\nsort_type : asc | desc"
+							},
+							"response": []
+						},
+						{
+							"name": "启用合同",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/contract/exec/577f27d3b52511ea878e000c296a88fe",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"contract",
+										"exec",
+										"577f27d3b52511ea878e000c296a88fe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取合同状态",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/contract/all_status",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"contract",
+										"all_status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取合同详情",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/contract/info/577f3100b52511ea878e000c296a88fe",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"contract",
+										"info",
+										"577f3100b52511ea878e000c296a88fe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "终止合同",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"amount\":0,\r\n   \"remark\":\"无商品损坏\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/contract/stop/577f27d3b52511ea878e000c296a88fe",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"contract",
+										"stop",
+										"577f27d3b52511ea878e000c296a88fe"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "账单管理",
+					"item": [
+						{
+							"name": "获取客户应收单列表(含详情)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/account/unpaid/610",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"account",
+										"unpaid",
+										"610"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取最近一个月充值消费记录",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/account/before_record",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"account",
+										"before_record"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取可退款客户信息",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/account/balance_refund/250",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"account",
+										"balance_refund",
+										"250"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "账单流水数据查询（主页）",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk4NzcyODQ2LCJleHAiOjE1OTkzNzc2NDYsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cHM6XC9cL2FwaS50aWFuaHVhbjA3NTQuY29tXC91cGxvYWRzXC8yMDIwMDYwNlwvZTY2MGQ1OGEyODhjMTFiNDhhYzZlZTNjNWZiYTdkNmIuanBnIiwidXNlcm5hbWUiOiJzdXBlciJ9fQ.f89r3mTZ3KKPMX3d9vyAmidbMMAeHc9ZCKcE0d12XFc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/account/bill_statistics?start_date=2020-08-26&end_date=2020-08-30&page=1&size=3",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"account",
+										"bill_statistics"
+									],
+									"query": [
+										{
+											"key": "start_date",
+											"value": "2020-08-26"
+										},
+										{
+											"key": "end_date",
+											"value": "2020-08-30"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "账单流水数据查询(子页)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk4NzcyODQ2LCJleHAiOjE1OTkzNzc2NDYsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cHM6XC9cL2FwaS50aWFuaHVhbjA3NTQuY29tXC91cGxvYWRzXC8yMDIwMDYwNlwvZTY2MGQ1OGEyODhjMTFiNDhhYzZlZTNjNWZiYTdkNmIuanBnIiwidXNlcm5hbWUiOiJzdXBlciJ9fQ.f89r3mTZ3KKPMX3d9vyAmidbMMAeHc9ZCKcE0d12XFc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/account/bill_flow?start_date=2020-07-28&end_date=2020-07-28&page=1&size=10&type=1&name=wanglu",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"account",
+										"bill_flow"
+									],
+									"query": [
+										{
+											"key": "start_date",
+											"value": "2020-07-28"
+										},
+										{
+											"key": "end_date",
+											"value": "2020-07-28"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": "1"
+										},
+										{
+											"key": "name",
+											"value": "wanglu"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "财务汇总",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk4NzcyODQ2LCJleHAiOjE1OTkzNzc2NDYsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cHM6XC9cL2FwaS50aWFuaHVhbjA3NTQuY29tXC91cGxvYWRzXC8yMDIwMDYwNlwvZTY2MGQ1OGEyODhjMTFiNDhhYzZlZTNjNWZiYTdkNmIuanBnIiwidXNlcm5hbWUiOiJzdXBlciJ9fQ.f89r3mTZ3KKPMX3d9vyAmidbMMAeHc9ZCKcE0d12XFc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/account/bill_proofread?start_date=2020-08-26&end_date=2020-08-28",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"account",
+										"bill_proofread"
+									],
+									"query": [
+										{
+											"key": "start_date",
+											"value": "2020-08-26"
+										},
+										{
+											"key": "end_date",
+											"value": "2020-08-28"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "账单流水数据查询备注",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk4NzcyODQ2LCJleHAiOjE1OTkzNzc2NDYsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cHM6XC9cL2FwaS50aWFuaHVhbjA3NTQuY29tXC91cGxvYWRzXC8yMDIwMDYwNlwvZTY2MGQ1OGEyODhjMTFiNDhhYzZlZTNjNWZiYTdkNmIuanBnIiwidXNlcm5hbWUiOiJzdXBlciJ9fQ.f89r3mTZ3KKPMX3d9vyAmidbMMAeHc9ZCKcE0d12XFc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/account/bill_flow_remark/76426bfad09c11ea88e7cf7297effce6",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"account",
+										"bill_flow_remark",
+										"76426bfad09c11ea88e7cf7297effce6"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "投诉反馈",
+					"item": [
+						{
+							"name": "查询反馈信息列表",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/feedback?status=1&feedback_type=1&start_date=2020-07-17&end_date=2020-07-18",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"feedback"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "1"
+										},
+										{
+											"key": "feedback_type",
+											"value": "1"
+										},
+										{
+											"key": "start_date",
+											"value": "2020-07-17"
+										},
+										{
+											"key": "end_date",
+											"value": "2020-07-18"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "确认反馈信息已读",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/feedback/complete/56a551b0bf6011ea99cd00e0707ca7dd",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"feedback",
+										"complete",
+										"56a551b0bf6011ea99cd00e0707ca7dd"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "广告管理",
+					"item": [
+						{
+							"name": "根据ID获取翻动相册、通告",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1NDk0MDAxLCJleHAiOjE1OTYwOTg4MDEsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjU1MDBcL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.wH8PG1ok4R8sxkIO3xAX0sU1wSIaMVQhGafZ6fKjjIY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/adv/13e14c94cbea11ea8660cfe693f142ee",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"adv",
+										"13e14c94cbea11ea8660cfe693f142ee"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "广告图片列表",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1NDk0MDAxLCJleHAiOjE1OTYwOTg4MDEsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjU1MDBcL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.wH8PG1ok4R8sxkIO3xAX0sU1wSIaMVQhGafZ6fKjjIY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/adv?type=1&page=1&size=15",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"adv"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "1"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "15"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除广告、公告",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1ODE1NTYyLCJleHAiOjE1OTY0MjAzNjIsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsInVuaW9uaWQiOiIiLCJtb2JpbGUiOiIxMzYxMjQxMjQ5MCIsImlzX21hbmFnZXIiOjEsInNjb3BlIjozMiwiY3JlYXRlX3RpbWUiOiIyMDIwLTA3LTA3IDE1OjU2OjU0In19.19TOuacR-aWx_0j4lHgwbx56ghX6updssiSAPzsg8ow",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/adv/13e14c94cbea11ea8660cfe693f142ee",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"adv",
+										"13e14c94cbea11ea8660cfe693f142ee"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "启用视频",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/adv/video_enable/idxxxxxxxxxxxxxxxxxxxx",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"adv",
+										"video_enable",
+										"idxxxxxxxxxxxxxxxxxxxx"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "公告列表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1NDk0MDAxLCJleHAiOjE1OTYwOTg4MDEsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjU1MDBcL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.wH8PG1ok4R8sxkIO3xAX0sU1wSIaMVQhGafZ6fKjjIY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/adv?type=2&page=1&size=15",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"adv"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "2"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "15"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加广告图片",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1NDk0MDAxLCJleHAiOjE1OTYwOTg4MDEsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjU1MDBcL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.wH8PG1ok4R8sxkIO3xAX0sU1wSIaMVQhGafZ6fKjjIY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"file_id\":2,\r\n    \"type\":1,\r\n    \"status\":1,\r\n    \"sort\":0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/adv",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"adv"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加公告",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1NDk0MDAxLCJleHAiOjE1OTYwOTg4MDEsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjU1MDBcL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.wH8PG1ok4R8sxkIO3xAX0sU1wSIaMVQhGafZ6fKjjIY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\":2,\r\n    \"content\":\"空112\",\r\n    \"status\":1,\r\n    \"sort\":0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/adv",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"adv"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "编辑广告",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1NDk0MDAxLCJleHAiOjE1OTYwOTg4MDEsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjU1MDBcL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.wH8PG1ok4R8sxkIO3xAX0sU1wSIaMVQhGafZ6fKjjIY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/adv/13e14c94cbea11ea8660cfe693f142ee",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"adv",
+										"13e14c94cbea11ea8660cfe693f142ee"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "水卡管理",
+					"item": [
+						{
+							"name": "查看水卡列表",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1NTU5NjA3LCJleHAiOjE1OTYxNjQ0MDcsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjU1MDBcL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.dVTdM8Slh1IJqyay3uL3bWAru90ZoCOQepgD3DDhZQw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/card?size=15&page=1&status=1&no=0",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"card"
+									],
+									"query": [
+										{
+											"key": "size",
+											"value": "15"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "status",
+											"value": "1"
+										},
+										{
+											"key": "no",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查看水卡明细",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1NDkxMTUxLCJleHAiOjE1OTYwOTU5NTEsInVzZXIiOnsiaWQiOjEwMDAwNSwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3hpTzY1Vy1wMVBWYnVNVlpncXFqYXdEYTQ2cyIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNzE5OTI1OTAwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0xNSAxNDoyNDo0OCJ9fQ.ExZe4vNUt8h-nN2CEQq-5oF4kdk00m7hFVrC1q8hmHA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/card/bill_detail_by_id/21c121f2c8bd11ea99b404922610d54b",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"card",
+										"bill_detail_by_id",
+										"21c121f2c8bd11ea99b404922610d54b"
+									],
+									"query": [
+										{
+											"key": "start_date",
+											"value": "2020-07-01",
+											"disabled": true
+										},
+										{
+											"key": "end_date",
+											"value": "2020-07-30",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "公众号管理",
+					"item": [
+						{
+							"name": "获取更新公众号所有粉丝",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/wxmp/get_and_update_fans?update_all=0",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"wxmp",
+										"get_and_update_fans"
+									],
+									"query": [
+										{
+											"key": "update_all",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "文章管理",
+					"item": [
+						{
+							"name": "删除文章分类",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/article/category/artcategoryid",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"article",
+										"category",
+										"artcategoryid"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "文章分类列表",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/article/category?page=1&size=15",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"article",
+										"category"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "15"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除文章",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/article/articleid",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"article",
+										"articleid"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "文章列表",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1NTU5NjA3LCJleHAiOjE1OTYxNjQ0MDcsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjU1MDBcL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.dVTdM8Slh1IJqyay3uL3bWAru90ZoCOQepgD3DDhZQw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/article?page=1&size=15&status=&category_id=",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"article"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "15"
+										},
+										{
+											"key": "status",
+											"value": ""
+										},
+										{
+											"key": "category_id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加文章分类",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/article/category",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"article",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "编辑文章分类",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/article/category/artcategoryid",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"article",
+										"category",
+										"artcategoryid"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加文章",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1NTU5NjA3LCJleHAiOjE1OTYxNjQ0MDcsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjU1MDBcL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.dVTdM8Slh1IJqyay3uL3bWAru90ZoCOQepgD3DDhZQw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_id\":\"8aeb0458d24611ea9ef704922610d54b\",\r\n    \"title\":\"天环冷链水厂市场正式开业\",\r\n    \"description\":\"天环冷链水厂市场正式开业\",\r\n    \"content\":\"<p>contentcontentcontentcontentcontentcontentcontent</p>\",\r\n    \"status\":1,\r\n    \"recommend\":1,\r\n    \"hits\":322,\r\n    \"sort\":50,\r\n    \"big_thumb_file_id\":1,\r\n    \"thumb_file_id\":2,\r\n    \"template_no\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/article",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"article"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "编辑文章",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1NTU5NjA3LCJleHAiOjE1OTYxNjQ0MDcsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvMTI3LjAuMC4xOjU1MDBcL3VwbG9hZHNcLzIwMjAwNjA2XC9lNjYwZDU4YTI4OGMxMWI0OGFjNmVlM2M1ZmJhN2Q2Yi5qcGciLCJ1c2VybmFtZSI6InN1cGVyIn19.dVTdM8Slh1IJqyay3uL3bWAru90ZoCOQepgD3DDhZQw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category_id\":\"8aeb0458d24611ea9ef704922610d54b\",\r\n    \"title\":\"天环冷链水厂市场正式开业\",\r\n    \"description\":\"天环冷链水厂市场正式开业\",\r\n    \"content\":\"<p>< img src=\"http://th.api.yuxiangxx.com/uploads/20200729/794ee2e4abf858b427a2e25b43989ced.jpg\"></p >\",\r\n    \"status\":1,\r\n    \"recommend\":1,\r\n    \"hits\":355,\r\n    \"sort\":50,\r\n    \"big_thumb_file_id\":1,\r\n    \"thumb_file_id\":2,\r\n    \"template_no\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/article/9ab1f940d24711ea9d4204922610d54b",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"article",
+										"9ab1f940d24711ea9d4204922610d54b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "文章排序",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sort\":60\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/article/sort/9ab1f940d24711ea9d4204922610d54b",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"article",
+										"sort",
+										"9ab1f940d24711ea9d4204922610d54b"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "首页",
+					"item": [
+						{
+							"name": "水电表最近30天使用情况",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/index/meter_statistics",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"index",
+										"meter_statistics"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "房源租赁统计",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/index/housing_statistics",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"index",
+										"housing_statistics"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "合同情况统计",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/index/contract_statistics",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"index",
+										"contract_statistics"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "商户信息统计",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/index/customer_statistics",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"index",
+										"customer_statistics"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "水电在线状态统计",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/index/meter_online_state_count",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"index",
+										"meter_online_state_count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "服务消息统计",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/index/serve_message_count",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"index",
+										"serve_message_count"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "小程序成员管理",
+					"item": [
+						{
+							"name": "获取小程序用户列表",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/member?is_manager=0&id",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"member"
+									],
+									"query": [
+										{
+											"key": "is_manager",
+											"value": "0"
+										},
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "设置账号为高级权限",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNjAzNDMzNTYyLCJleHAiOjE2MDQwMzgzNjIsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cDpcL1wvYXBpLnRpYW5odWFuLmNvbTo1NTAwXC91cGxvYWRzXC8yMDIwMDYwNlwvZTY2MGQ1OGEyODhjMTFiNDhhYzZlZTNjNWZiYTdkNmIuanBnIiwidXNlcm5hbWUiOiJzdXBlciJ9fQ.JJDQBJaipN-AIyBbVYT-JCotujlL4ucUxJqI954XkPQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"is_manager\": 1,\r\n    \"is_maintainer\" : 1,\r\n    \"is_servicer\" : 1,\r\n    \"scope\": 32,\r\n    \"password\":\"yuxiang\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/member/set/100005",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"member",
+										"set",
+										"100005"
+									]
+								},
+								"description": "is_manager: 1 是 0 否\r\nscope: 默认32 最高权限"
+							},
+							"response": []
+						},
+						{
+							"name": "设置小程序用户姓名",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"is_manager\": 1,\r\n    \"is_maintainer\" : 1,\r\n    \"is_servicer\" : 1,\r\n    \"scope\": 32,\r\n    \"password\":\"yuxiang\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/member/set_name/100005",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"member",
+										"set_name",
+										"100005"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "员工",
+					"item": [
+						{
+							"name": "获取员工列表",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNjA0NDc5MTY4LCJleHAiOjE2MDUwODM5NjgsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cHM6XC9cL2FwaS50aWFuaHVhbjA3NTQuY29tXC91cGxvYWRzXC8yMDIwMDYwNlwvZTY2MGQ1OGEyODhjMTFiNDhhYzZlZTNjNWZiYTdkNmIuanBnIiwidXNlcm5hbWUiOiJzdXBlciJ9fQ.kuamJ4TPVy40IvRZpRPhbIY5oLcl2fH6WaRD_CWSCo4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/staff?page=1&size=15&keyword=",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"staff"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "15",
+											"description": "选填"
+										},
+										{
+											"key": "keyword",
+											"value": "",
+											"description": "姓名或手机号，like 查询"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加员工分组",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/staff/group",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"staff",
+										"group"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除员工分组",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/staff/group/a3546cf81e7911eb9eca4f84b7e990ef",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"staff",
+										"group",
+										"a3546cf81e7911eb9eca4f84b7e990ef"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "查询员工分组列表",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/staff/group",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"staff",
+										"group"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "员工余额明细",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/admin/v1/staff/balance_log?staff_id=47ab2db21b1b11eb8dbae950fd65e3f7&page=1&size=10&type=",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"staff",
+										"balance_log"
+									],
+									"query": [
+										{
+											"key": "staff_id",
+											"value": "47ab2db21b1b11eb8dbae950fd65e3f7"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "type",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "添加员工信息",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"no\": \"006\",\r\n    \"real_name\": \"龙王V\",\r\n    \"gender\": \"男\",\r\n    \"mobile\": \"13531196203\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/staff",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"staff"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "修改员工信息",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNjA0NDc5MTY4LCJleHAiOjE2MDUwODM5NjgsInVzZXIiOnsiaWQiOjEsIm5pY2tuYW1lIjoiXHU4ZDg1XHU3ZWE3XHU3YmExXHU3NDA2XHU1NDU4IiwiZW1haWwiOiIiLCJhZG1pbiI6MiwiYWN0aXZlIjoxLCJncm91cF9pZCI6MCwiY3JlYXRlX3RpbWUiOiIyMDIwLTAyLTI4IDA5OjUwOjM2IiwiYXZhdGFyIjoiaHR0cHM6XC9cL2FwaS50aWFuaHVhbjA3NTQuY29tXC91cGxvYWRzXC8yMDIwMDYwNlwvZTY2MGQ1OGEyODhjMTFiNDhhYzZlZTNjNWZiYTdkNmIuanBnIiwidXNlcm5hbWUiOiJzdXBlciJ9fQ.kuamJ4TPVy40IvRZpRPhbIY5oLcl2fH6WaRD_CWSCo4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"no\":\"1001\",\r\n    \"real_name\":\"子龙\",\r\n    \"gender\":\"男\",\r\n    \"staff_group_id\":\"dd2f59421e7911ebbf6f293fc10258ed\",\r\n    \"mobile\":\"13531196203\"  \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/staff/aec4ceb6141011ebb6bee9477878835d",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"staff",
+										"aec4ceb6141011ebb6bee9477878835d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "删除员工",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/admin/v1/staff/3fda03e0093411eb97c875a3f74efd95",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"staff",
+										"3fda03e0093411eb97c875a3f74efd95"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "设置或取消员工为食堂管理员",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"dinning_role\": 1,\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/admin/v1/staff/set_admin/08723bda027c11eb88b5000c296a88fe",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"staff",
+										"set_admin",
+										"08723bda027c11eb88b5000c296a88fe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "设置员工在职或离职状态",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": 1,\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/admin/v1/staff/set_status/cbf7eae4093311eba4c900163e0a8b06",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"staff",
+										"set_status",
+										"cbf7eae4093311eba4c900163e0a8b06"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "编辑员工分组",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"group_name\":\"行政组\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/admin/v1/staff/group/a3546cf81e7911eb9eca4f84b7e990ef",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"admin",
+										"v1",
+										"staff",
+										"group",
+										"a3546cf81e7911eb9eca4f84b7e990ef"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "小程序api接口",
+			"item": [
+				{
+					"name": "首页",
+					"item": [
+						{
+							"name": "一键缴费",
+							"item": [
+								{
+									"name": "获取待缴费账单列表",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{th_url}}/api/v1/account/unpaid?page=1&size=15",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"unpaid"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "15"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "获取账单列表（按月份搜索）",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{th_url}}/api/v1/account/all?start_date=2020-07-03&end_date=2020-07-10&page=1&size=15",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"all"
+											],
+											"query": [
+												{
+													"key": "start_date",
+													"value": "2020-07-03"
+												},
+												{
+													"key": "end_date",
+													"value": "2020-07-10"
+												},
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "15"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "生成微信支付订单",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk0NDYxMTkxLCJleHAiOjE1OTUwNjU5OTEsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ._baipF5gnxpGd4P5lVGmmBoGu1Ag_gTq-EuUOJjF95E",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"fids\":[1009,1010]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{th_url}}/api/v1/account/pre_bill",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"pre_bill"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "预存充值",
+							"item": [
+								{
+									"name": "水电费预存充值",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk0NDYxMTkxLCJleHAiOjE1OTUwNjU5OTEsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ._baipF5gnxpGd4P5lVGmmBoGu1Ag_gTq-EuUOJjF95E",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"amount\": 500.00\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{th_url}}/api/v1/account/meter",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"meter"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "水卡充值",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk0Nzk2OTc1LCJleHAiOjE1OTU0MDE3NzUsInVzZXIiOnsiaWQiOjEwMDAwNSwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3hpTzY1Vy1wMVBWYnVNVlpncXFqYXdEYTQ2cyIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNzE5OTI1OTAwIiwiaXNfbWFuYWdlciI6MSwic2NvcGUiOjQsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0xNSAxNDoyNDo0OCJ9fQ.yqQjekEJ9FaVdbnLJ-UhRX5Ui5Yu7ROlGbtRe42_TZo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"machine_no\":\"009\",\r\n    \"amount\":12.2,\r\n    \"machine_key\":\"xxxxxxx\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{th_url}}/api/v1/account/card_recharge",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"account",
+												"card_recharge"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "故障报修",
+							"item": [
+								{
+									"name": "获取报修信息详情",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{th_url}}/api/v1/customer/repair_info/27e8f480bdda11eab1c600e0707ca7dd",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"repair_info",
+												"27e8f480bdda11eab1c600e0707ca7dd"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "查询客户报修信息列表",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{th_url}}/api/v1/customer/repair_list?page=1&size=15",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"repair_list"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "15"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "添加报修记录",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"repair_unit\": 1000,\r\n    \"repair_type\": 1,\r\n    \"description\": \"cesfsfdf\",\r\n    \"phone\": \"13612412411\",\r\n    \"scheduled_time\": 1593765195\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{th_url}}/api/v1/customer/repair_add",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"repair_add"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "报修申请取消",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{th_url}}/api/v1/customer/repair_cancel/27e8f480bdda11eab1c600e0707ca7dd",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"repair_cancel",
+												"27e8f480bdda11eab1c600e0707ca7dd"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "客户报修评价",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"rid\": \"xxxxxxx\",\r\n    \"evaluation_status\": \"1\",\r\n    \"evaluation_content\": \"维修得很好，不错\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{th_url}}/api/v1/customer/repair_evaluation/27e8f480bdda11eab1c600e0707ca7dd",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"repair_evaluation",
+												"27e8f480bdda11eab1c600e0707ca7dd"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "投诉反馈",
+							"item": [
+								{
+									"name": "获取投诉反馈记录列表",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{th_url}}/api/v1/customer/feedback_list?page=1&size=15",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"feedback_list"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "size",
+													"value": "15"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "获取投诉反馈详情信息",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{th_url}}/api/v1/customer/feedback_info/56a551b0bf6011ea99cd00e0707ca7dd",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"feedback_info",
+												"56a551b0bf6011ea99cd00e0707ca7dd"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "添加投诉反馈记录",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"feedback_type\": 1,\r\n    \"description\": \"aaaaa\",\r\n    \"phone\": \"13612412411\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{th_url}}/api/v1/customer/feedback_add",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customer",
+												"feedback_add"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "获取轮播图",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MzI0NjQ2LCJleHAiOjE1OTU5Mjk0NDYsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MSwic2NvcGUiOjMyLCJjcmVhdGVfdGltZSI6IjIwMjAtMDctMDcgMTU6NTY6NTQifX0.NoYd3hFnGw9_Npmxsu83u6ujLRRWjl1g7ehii-ljNgU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/adv/banner",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"adv",
+										"banner"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取公告通知",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MzI0NjQ2LCJleHAiOjE1OTU5Mjk0NDYsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MSwic2NvcGUiOjMyLCJjcmVhdGVfdGltZSI6IjIwMjAtMDctMDcgMTU6NTY6NTQifX0.NoYd3hFnGw9_Npmxsu83u6ujLRRWjl1g7ehii-ljNgU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/adv/notice",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"adv",
+										"notice"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取待缴总额信息",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1OTA0NDcyLCJleHAiOjE1OTY1MDkyNzIsInVzZXIiOnsibWluaXByb19vcGVuaWQiOiJvdjkycTVZaXFWUmlmcC1ILWxhcERPYmZyb1dFIiwidW5pb25pZCI6IiIsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0yOCAxMDo0Nzo1MiIsImlkIjoiMTAwMDI1In19.3fFoHC0XM1y4wR2iia7SqEgsAzhWnTjPU5HIvB4Bh7A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/account/unpaid_total",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"unpaid_total"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取文章列表",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk2MDk1OTkyLCJleHAiOjE1OTY3MDA3OTIsInVzZXIiOnsibWluaXByb19vcGVuaWQiOiJvdjkycTVZaXFWUmlmcC1ILWxhcERPYmZyb1dFIiwidW5pb25pZCI6IiIsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0zMCAxNTo1OTo1MiIsImlkIjoiMTAwMDQ5In19.GAkQG17CdQWaeR8V4zwAUQd7jj5VLwfyyJvzvTraCMM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/article/get_list/1",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"article",
+										"get_list",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取文章分类",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/article/get_category?limit=4",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"article",
+										"get_category"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "根据Id获取文章",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/article/get_article/15fc1a40d24811ea8f9004922610d54b",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"article",
+										"get_article",
+										"15fc1a40d24811ea8f9004922610d54b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取视频",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "根据订单ID发起支付",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"1b9e74a0c7f511ea857f4c1d965ad75b\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/api/v1/pay",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"pay"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "资金流水",
+					"item": [
+						{
+							"name": "获取缴费明细列表",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNjAzMzQ2MjE4LCJleHAiOjE2MDM5NTEwMTgsInVzZXIiOnsiaWQiOjEwMDAwMywibmlja19uYW1lIjoiSmFtYW4iLCJhdmF0YXJfdXJsIjoiaHR0cHM6XC9cL3RoaXJkd3gucWxvZ28uY25cL21tb3BlblwvdmlfMzJcL0VURkdnT3BqcGljaWF2UDNEaWNzc2RtQklhSHo3TFJTSVFPS013N2d2WnIxemtjckRidnk1cVNiWVlmaWNVRVZQckE1bXFaMTN0SWlhUGV4TE9VZVBOT2pmS1FcLzEzMiIsIm1pbmlwcm9fb3BlbmlkIjoib3hpTzY1VjNtTE4tQlVDbGlzalZrcE93YzN6MCIsIm1wX29wZW5pZCI6Im96bXRPMFhmTXRNSHV3Mml6MmJ2QkVuay05NmciLCJ1bmlvbmlkIjoib2s1bDR3OTBKQU5kaW9zb2M4VU54enB5SjcwbyIsIm1vYmlsZSI6IjEzNTcwMzY5MTQ4IiwiaXNfbWFuYWdlciI6MSwic2NvcGUiOjMyLCJhcHBsaWNhdGlvbl9pZCI6MSwiY3JlYXRlX3RpbWUiOiIyMDIwLTA4LTIxIDE1OjAxOjE1In19.u0v1mSwiqJfigBmm2j5bEmoJWFgi7v_RjoFrLEb8Sro",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/account/get_bills?date=202009&housing_fid=2780",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"get_bills"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "202009"
+										},
+										{
+											"key": "housing_fid",
+											"value": "2780"
+										}
+									]
+								},
+								"description": "前提：已缴费，条件搜索：全部，XXXX年XX月-XXXX年XX月，房源"
+							},
+							"response": []
+						},
+						{
+							"name": "获取缴费记录详情",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/account/bills_info/dca4a272c0e411eaa49604922610d54b",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"bills_info",
+										"dca4a272c0e411eaa49604922610d54b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取余额变动记录列表",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/account/balance_meter_total?page=1&size=15&start_date=2020-07-13 14:23:00&end_date=2020-07-18 14:27:38",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"balance_meter_total"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "15"
+										},
+										{
+											"key": "start_date",
+											"value": "2020-07-13 14:23:00"
+										},
+										{
+											"key": "end_date",
+											"value": "2020-07-18 14:27:38"
+										},
+										{
+											"key": "housing_id",
+											"value": "af09bcedb52511ea878e000c296a88fe",
+											"description": "房源ID 注意不是FID",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取余额变动记录详情",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/account/balance_meter_info/90d62418c4d311ea8d971c1bb528fd61",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"balance_meter_info",
+										"90d62418c4d311ea8d971c1bb528fd61"
+									]
+								},
+								"description": "list_bill_type: 1 水电消耗 2 余额充值 3 退款\r\nmeter_type: 1 电表 2水表"
+							},
+							"response": []
+						},
+						{
+							"name": "获取余额变动记录统计",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/account/balance_meter_group?year=2020",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"balance_meter_group"
+									],
+									"query": [
+										{
+											"key": "year",
+											"value": "2020"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "个人中心",
+					"item": [
+						{
+							"name": "高级权限",
+							"item": [
+								{
+									"name": "合同查询",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk2MTc3MDEzLCJleHAiOjE1OTY3ODE4MTMsInVzZXIiOnsibWluaXByb19vcGVuaWQiOiJvdjkycTVZaXFWUmlmcC1ILWxhcERPYmZyb1dFIiwidW5pb25pZCI6IiIsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0zMSAxNDozMDoxMyIsImlkIjoiMTAwMDU1In19.EscbwY1Rhp27BNIsuNJqgrOJ7FFJqyoR7QSrYu6URgc",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{th_url}}/api/v1/manager/contract?page=2&size=15&parent_fid=1031&stall_type=1&housing=002",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"manager",
+												"contract"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "2"
+												},
+												{
+													"key": "size",
+													"value": "15"
+												},
+												{
+													"key": "parent_fid",
+													"value": "1031",
+													"description": "区域"
+												},
+												{
+													"key": "stall_type",
+													"value": "1",
+													"description": "类型"
+												},
+												{
+													"key": "housing",
+													"value": "002"
+												}
+											]
+										},
+										"description": "全部合同？历史合同，多角色？"
+									},
+									"response": []
+								},
+								{
+									"name": "启动合同",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk0OTY5MDg3LCJleHAiOjE1OTU1NzM4ODcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.t0aliBZm66HDkTCHZSjf9Qt7R5MWUavj5T6JFLZwhBY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{th_url}}/api/v1/manager/exec/577f27d3b52511ea878e000c296a88fe",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"manager",
+												"exec",
+												"577f27d3b52511ea878e000c296a88fe"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "获取分区类型集合",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MzI0NjQ2LCJleHAiOjE1OTU5Mjk0NDYsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MSwic2NvcGUiOjMyLCJjcmVhdGVfdGltZSI6IjIwMjAtMDctMDcgMTU6NTY6NTQifX0.NoYd3hFnGw9_Npmxsu83u6ujLRRWjl1g7ehii-ljNgU",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{th_url}}/api/v1/manager/partition",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"manager",
+												"partition"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "合同详情",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{th_url}}/api/v1/manager/contract_info/52d0bc50c33911eab5d504922610d54b",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"manager",
+												"contract_info",
+												"52d0bc50c33911eab5d504922610d54b"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "获取将到期或到期未续约的合同",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk3Mjk4MjQ2LCJleHAiOjE1OTc5MDMwNDYsInVzZXIiOnsiaWQiOjEwMDA5Nywibmlja19uYW1lIjoiXHU2Zjg0XHU2ZDc3IiwiYXZhdGFyX3VybCI6Imh0dHBzOlwvXC93eC5xbG9nby5jblwvbW1vcGVuXC92aV8zMlwvWDF5ZnVmQUxYSmljT1daRmljZFZiN1pPY0lwa3ZSczZVZTAyUjdoRVlIUjVFbDFROUF1WUlScGpyYnR6bVExaWIxTmt6UGhxMGQ2MGtOenY0ZEdrVmhrNUFcLzEzMiIsIm1pbmlwcm9fb3BlbmlkIjoib3hpTzY1ZEt0dENVNEtSQjNkTUdkSXZxb1dsVSIsIm1wX29wZW5pZCI6IiIsInVuaW9uaWQiOiJvazVsNHc0azdTTENueF9xX3RqZDA5cXhNdDFRIiwibW9iaWxlIjoiMTUwMTk3MDU5MzYiLCJpc19tYW5hZ2VyIjoxLCJzY29wZSI6MzIsImNyZWF0ZV90aW1lIjoiMjAyMC0wOC0wMyAxNDoyNToyMyJ9fQ.zx432Hrfs-qUl_ezdyUywP9dYLT_JGeh85jmofvpCLo",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{th_url}}/api/v1/manager/maturity_contract",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"manager",
+												"maturity_contract"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "2",
+													"disabled": true
+												},
+												{
+													"key": "size",
+													"value": "15",
+													"disabled": true
+												},
+												{
+													"key": "parent_fid",
+													"value": "1031",
+													"disabled": true
+												},
+												{
+													"key": "stall_type",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "housing",
+													"value": "002",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "终止合同",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk0OTY5MDg3LCJleHAiOjE1OTU1NzM4ODcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.t0aliBZm66HDkTCHZSjf9Qt7R5MWUavj5T6JFLZwhBY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"amount\":888,\r\n   \"remark\":\"损坏墙壁\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{th_url}}/api/v1/manager/stop/577f27d3b52511ea878e000c296a88fe",
+											"host": [
+												"{{th_url}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"manager",
+												"stop",
+												"577f27d3b52511ea878e000c296a88fe"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "获取客户合同信息列表",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/customer/contract?page=1&size=15",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customer",
+										"contract"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "15"
+										}
+									]
+								},
+								"description": "当前执行中的合同"
+							},
+							"response": []
+						},
+						{
+							"name": "获取客户合同详情",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/customer/contract_info/577f2f25b52511ea878e000c296a88fe",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customer",
+										"contract_info",
+										"577f2f25b52511ea878e000c296a88fe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取当前客户信息（含房源合同）",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/customer/info",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customer",
+										"info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取客户当前拥有的房源信息",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/customer/housing",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customer",
+										"housing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取客户拥有过的房源信息",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MjA2ODU3LCJleHAiOjE1OTU4MTE2NTcsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ.s6fHDR38nowBWszHt6mMMwvTU7TGHxv54SPM6CDClvE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/customer/all_housing",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customer",
+										"all_housing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取当前微信用户的充值水卡信息记录",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk2NjgzMTcxLCJleHAiOjE1OTcyODc5NzEsInVzZXIiOnsiaWQiOjEwMDA1Nywibmlja19uYW1lIjoiXHU2Zjg0XHU2ZDc3IiwiYXZhdGFyX3VybCI6Imh0dHBzOlwvXC93eC5xbG9nby5jblwvbW1vcGVuXC92aV8zMlwvWDF5ZnVmQUxYSmljT1daRmljZFZiN1pPY0lwa3ZSczZVZTAyUjdoRVlIUjVFbDFROUF1WUlScGpyYnR6bVExaWIxTmt6UGhxMGQ2MGtOenY0ZEdrVmhrNUFcLzEzMiIsIm1pbmlwcm9fb3BlbmlkIjoib3hpTzY1ZEt0dENVNEtSQjNkTUdkSXZxb1dsVSIsIm1wX29wZW5pZCI6IiIsInVuaW9uaWQiOiJvazVsNHc0azdTTENueF9xX3RqZDA5cXhNdDFRIiwibW9iaWxlIjoiMTUwMTk3MDU5MzYiLCJpc19tYW5hZ2VyIjoxLCJzY29wZSI6MzIsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0zMSAxNjozNjoxOSJ9fQ.HEJ4oM_9S72mNZsqlhJpO9y8xf-_khf9gDk-w1JHDMI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/account/recharge_card_log?page=1&size=15",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"recharge_card_log"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "15"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取当前微信用户的充值水卡信息记录详情",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk2NjgzMTcxLCJleHAiOjE1OTcyODc5NzEsInVzZXIiOnsiaWQiOjEwMDA1Nywibmlja19uYW1lIjoiXHU2Zjg0XHU2ZDc3IiwiYXZhdGFyX3VybCI6Imh0dHBzOlwvXC93eC5xbG9nby5jblwvbW1vcGVuXC92aV8zMlwvWDF5ZnVmQUxYSmljT1daRmljZFZiN1pPY0lwa3ZSczZVZTAyUjdoRVlIUjVFbDFROUF1WUlScGpyYnR6bVExaWIxTmt6UGhxMGQ2MGtOenY0ZEdrVmhrNUFcLzEzMiIsIm1pbmlwcm9fb3BlbmlkIjoib3hpTzY1ZEt0dENVNEtSQjNkTUdkSXZxb1dsVSIsIm1wX29wZW5pZCI6IiIsInVuaW9uaWQiOiJvazVsNHc0azdTTENueF9xX3RqZDA5cXhNdDFRIiwibW9iaWxlIjoiMTUwMTk3MDU5MzYiLCJpc19tYW5hZ2VyIjoxLCJzY29wZSI6MzIsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0zMSAxNjozNjoxOSJ9fQ.HEJ4oM_9S72mNZsqlhJpO9y8xf-_khf9gDk-w1JHDMI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{th_url}}/api/v1/account/recharge_card_detail/e0273d50d85a11eabae06d8410d988d3",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"account",
+										"recharge_card_detail",
+										"e0273d50d85a11eabae06d8410d988d3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取用户微信信息",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk3MjkwMTM5LCJleHAiOjE1OTc4OTQ5MzksInVzZXIiOnsiaWQiOjEwMDA5NSwibmlja19uYW1lIjoia2luZyIsImF2YXRhcl91cmwiOiJodHRwczpcL1wvd3gucWxvZ28uY25cL21tb3BlblwvdmlfMzJcL05aUks5MGRnS0NsR0w3dWljdjhOTTRSSU5VUGljcHV0VXczWHhKREtOMWxCWVdCRGR0SzVhbExVOW1qRGsybUYxRk85MU9pYmcybklGdXYwdFI4akdpYUVNZ1wvMTMyIiwibWluaXByb19vcGVuaWQiOiJveGlPNjVXLXAxUFZidU1WWmdxcWphd0RhNDZzIiwibXBfb3BlbmlkIjoib3ptdE8wWkZBSm9OWUcyalZIWmZ3THZ0RkczVSIsInVuaW9uaWQiOiJvazVsNHd4WjBlWDZwRWlWMkRlZ1hBZ1hkNkhnIiwibW9iaWxlIjoiMTM3MTk5MjU5MDAiLCJpc19tYW5hZ2VyIjoxLCJzY29wZSI6MzIsImNyZWF0ZV90aW1lIjoiMjAyMC0wOC0wMyAxNDoxNzozNCJ9fQ.2G5xMzsLDrFb3XIPI13ekBzEs1ixoNk4DaZ84dzV9Ps",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"encrypted_data\": \"XXXXXXXXX\",\r\n    \"iv\": \"XXXXXXXXX\"    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/api/v1/member/info",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"member",
+										"info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取微信绑定手机号码",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk0NDYxMTkxLCJleHAiOjE1OTUwNjU5OTEsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MCwic2NvcGUiOjAsImNyZWF0ZV90aW1lIjoiMjAyMC0wNy0wNyAxNTo1Njo1NCJ9fQ._baipF5gnxpGd4P5lVGmmBoGu1Ag_gTq-EuUOJjF95E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"encrypted_data\": \"XXXXXXXXX\",\r\n    \"iv\": \"XXXXXXXXX\"    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{th_url}}/api/v1/member/phone",
+									"host": [
+										"{{th_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"member",
+										"phone"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "退出登录",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1MzI0NjQ2LCJleHAiOjE1OTU5Mjk0NDYsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsIm1wX29wZW5pZCI6IiIsIm1vYmlsZSI6IjEzNjEyNDEyNDkwIiwiaXNfbWFuYWdlciI6MSwic2NvcGUiOjMyLCJjcmVhdGVfdGltZSI6IjIwMjAtMDctMDcgMTU6NTY6NTQifX0.NoYd3hFnGw9_Npmxsu83u6ujLRRWjl1g7ehii-ljNgU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{th_url}}/api/v1/member/logout",
+							"host": [
+								"{{th_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"member",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "小程序令牌刷新",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk0MTg2Njg2LCJleHAiOjE1OTQ3OTE0ODYsInVzZXIiOnsiaWQiOjEwMDAwMn19.JFcm_5_v1vCd2cA2earciWI25a2V1JTA1jEFMXBTjtU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{th_url}}/api/v1/member/refresh",
+							"host": [
+								"{{th_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"member",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "手机号授权",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNjAzMzQ2MjE4LCJleHAiOjE2MDM5NTEwMTgsInVzZXIiOnsiaWQiOjEwMDAwMywibmlja19uYW1lIjoiSmFtYW4iLCJhdmF0YXJfdXJsIjoiaHR0cHM6XC9cL3RoaXJkd3gucWxvZ28uY25cL21tb3BlblwvdmlfMzJcL0VURkdnT3BqcGljaWF2UDNEaWNzc2RtQklhSHo3TFJTSVFPS013N2d2WnIxemtjckRidnk1cVNiWVlmaWNVRVZQckE1bXFaMTN0SWlhUGV4TE9VZVBOT2pmS1FcLzEzMiIsIm1pbmlwcm9fb3BlbmlkIjoib3hpTzY1VjNtTE4tQlVDbGlzalZrcE93YzN6MCIsIm1wX29wZW5pZCI6Im96bXRPMFhmTXRNSHV3Mml6MmJ2QkVuay05NmciLCJ1bmlvbmlkIjoib2s1bDR3OTBKQU5kaW9zb2M4VU54enB5SjcwbyIsIm1vYmlsZSI6IjEzNTcwMzY5MTQ4IiwiaXNfbWFuYWdlciI6MSwic2NvcGUiOjMyLCJhcHBsaWNhdGlvbl9pZCI6MSwiY3JlYXRlX3RpbWUiOiIyMDIwLTA4LTIxIDE1OjAxOjE1In19.u0v1mSwiqJfigBmm2j5bEmoJWFgi7v_RjoFrLEb8Sro",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{th_url}}/api/v1/member/authority?mobile=13570369148",
+							"host": [
+								"{{th_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"member",
+								"authority"
+							],
+							"query": [
+								{
+									"key": "mobile",
+									"value": "13570369148"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "检测是否已关注公众号",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ5dXhpYW5na2VqaS16ZXJvIiwiaWF0IjoxNTk1ODE1NTYyLCJleHAiOjE1OTY0MjAzNjIsInVzZXIiOnsiaWQiOjEwMDAwMiwibmlja19uYW1lIjoiIiwiYXZhdGFyX3VybCI6IiIsIm1pbmlwcm9fb3BlbmlkIjoib3Y5MnE1WWlxVlJpZnAtSC1sYXBET2Jmcm9XRSIsInVuaW9uaWQiOiIiLCJtb2JpbGUiOiIxMzYxMjQxMjQ5MCIsImlzX21hbmFnZXIiOjEsInNjb3BlIjozMiwiY3JlYXRlX3RpbWUiOiIyMDIwLTA3LTA3IDE1OjU2OjU0In19.19TOuacR-aWx_0j4lHgwbx56ghX6updssiSAPzsg8ow",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{th_url}}/api/v1/member/check_attention",
+							"host": [
+								"{{th_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"member",
+								"check_attention"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取登录令牌",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"021bu6Ga1rXAMz0a66Ha1fr9AU2bu6GW\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{th_url}}/api/v1/member/login",
+							"host": [
+								"{{th_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"member",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "金蝶网关服务",
+			"item": [
+				{
+					"name": "每月账单",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{th_url}}/consumer/v1/gateway/monthly",
+							"host": [
+								"{{th_url}}"
+							],
+							"path": [
+								"consumer",
+								"v1",
+								"gateway",
+								"monthly"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "新入驻商户账单",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{th_url}}/consumer/v1/gateway/new_account",
+							"host": [
+								"{{th_url}}"
+							],
+							"path": [
+								"consumer",
+								"v1",
+								"gateway",
+								"new_account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "退租商户账单",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{th_url}}/consumer/v1/gateway/refund_account",
+							"host": [
+								"{{th_url}}"
+							],
+							"path": [
+								"consumer",
+								"v1",
+								"gateway",
+								"refund_account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "同步更新数据",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ModelName\": [\r\n        \"Housing\"\r\n    ],\r\n    \"Type\": \"insert\",\r\n    \"Data\": {\r\n        \"Housing\": [\r\n            {\r\n                \"fid\": 3399,\r\n                \"bill_no\": \"THYS-2020100010\",\r\n                \"start_date\": 0,\r\n                \"end_date\": 0,\r\n                \"other_no\":\"BXD2349I2903I4092I3904\",\r\n                \"customer_fid\": 643,\r\n                \"housing_fid\": 2310,\r\n                \"total_amount\": 0.0,\r\n                \"state\": 0,\r\n                \"type\": 1,\r\n                \"bill_date\":1604937600\r\n            }\r\n        ]\r\n    },\r\n    \"AutoUnion\": false,\r\n    \"UnionField\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{th_url}}/consumer/v1/gateway/sync",
+							"host": [
+								"{{th_url}}"
+							],
+							"path": [
+								"consumer",
+								"v1",
+								"gateway",
+								"sync"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
