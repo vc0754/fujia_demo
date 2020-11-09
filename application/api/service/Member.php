@@ -360,6 +360,7 @@ class Member
         $staff = Staff::where('mobile',$mobile)->find();
         if($staff){
             $auth = $auth + AppAuthEnum::Manager;
+            $authList[] = AppAuthEnum::Manager;
             $scope = 32;
         }
 

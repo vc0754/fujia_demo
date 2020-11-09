@@ -16,7 +16,5 @@ class AppAuthEnum
 {
     const Customer = 1; //客户
 
-    const Manager = 2;  //市场管理
-
-    const Maintainer = 4; //维修人员
+    const Manager = 2;  //抄表人员
 }
