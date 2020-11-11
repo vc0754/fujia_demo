@@ -12,18 +12,10 @@ namespace app\lib\enum;
 class ContractStatus
 {
     //执行中
-    const EXECUTING = 3;
-    //待执行
-    const WAITING_EXECUTE = 2;
-    //待付款
-    const WAITING_PAY = 1;
-    //待终止
-    const WAITING_FINISH = 4;
+    const EXECUTING = 1;
     //已终止
-    const FINISHED = 5;
-    //终止且已退款
-    const FINISHED_AND_REFUND = 6;
+    const FINISHED = 2;
     //作废取消
-    const VOID_CANCEL = 7;
+    const VOID_CANCEL = 3;
 
 }

@@ -213,17 +213,6 @@ class Member
         if($errCode == 0){
             $objData = json_decode($data);
 
-            //新增微信授权过的手机号记录
-            $filter[] = ['member_id','=',$member->id];
-            $filter[] = ['mobile','=',$objData->purePhoneNumber];
-            $memberPhoneModel = new MemberPhone();
-            $obj = $memberPhoneModel->where($filter)->find();
-            //判断手机号是否已存在
-            if(empty($obj)){
-                $memberPhoneModel->save(['member_id'=>$member->id,'mobile'=> $objData->purePhoneNumber]);
-            }
-
-
             //授权
             $authority = $this->authority($member,$objData->purePhoneNumber);
 //            $authority = $this->authority($member->id,$member->minipro_openid,$objData->purePhoneNumber);
@@ -257,6 +246,15 @@ class Member
             'scope' => 0,
         ];
         Cache::rm($member->minipro_openid);
+        //新增微信授权过的手机号记录
+        $filter[] = ['member_id','=',$member->id];
+        $filter[] = ['mobile','=',$mobile];
+        $memberPhoneModel = new MemberPhone();
+        $obj = $memberPhoneModel->where($filter)->find();
+        //判断手机号是否已存在
+        if(empty($obj)){
+            $memberPhoneModel->save(['member_id'=>$member->id,'mobile'=> $mobile]);
+        }
 //        $memberModel = new MemberModel;
 //        $member = $memberModel->get($mid);
         if($member){

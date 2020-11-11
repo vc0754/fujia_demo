@@ -76,10 +76,16 @@ class CustomerService
         }
     }
 
-    private function getAvailableContract()
+    private function getAvailableContract($housing_fid='')
     {
+        $where = [];
+        if($housing_fid){
+            $where[] = ['housing_fid','=',$housing_fid];
+        }
         $contract = ContractModel::where('customer_fid', $this->customer->fid)
-            ->where('status', ['=', ContractStatus::EXECUTING], ['=', ContractStatus::WAITING_FINISH], 'or')->find();
+            ->where($where)
+            ->where('status',  ContractStatus::EXECUTING)
+            ->find();
         return $contract;
     }
 
@@ -1046,10 +1052,10 @@ class CustomerService
     public function addRepair($params)
     {
 
-        $contract = $this->getAvailableContract();
+        $contract = $this->getAvailableContract($params['repair_unit']);
         if (!$contract) {
             throw new HandleException([
-                'msg' => '您未正式入住,暂不支持该功能'
+                'msg' => '报修单元有误，请选择您所在正确的报修单位'
             ]);
         }
 
@@ -1072,38 +1078,21 @@ class CustomerService
      */
     public function cancelRepair($params)
     {
-//        $filter[] = ['id', '=', $params['rid']];
-//        $filter[] = ['status', '=', RepairStatus::PENDING];
-//        $obj = RepairApplication::where($filter)->find();
+        $filter[] = ['id','=',$params['rid']];
+        $filter[] = ['status','=',RepairStatus::PENDING];
+        $obj = RepairApplication::where($filter)->find();
 
-        $obj = RepairApplication::where('status',RepairStatus::PENDING)
-            ->whereOr('status',RepairStatus::QUOTED_PRICE)
-            ->whereOr('status',RepairStatus::WAIT_PAID)
-            ->find($params['rid']);
-
-        if (!$obj) {
+        if(!$obj){
             throw new ParameterException([
                 'msg' => '找不到报修申请信息'
             ]);
         }
         $obj->cancel_operator_type = OperatorType::MEMBER;
-        $obj->cancel_operator_id = Token::getCurrentMID();
-        $obj->cancel_remark = $params['cancel_remark'];
+        $obj->cancel_operator_id  = Token::getCurrentMID();
+
+        $obj->cancel_remark = isset($params['cancel_remark'])? $params['cancel_remark'] :'';
         $obj->status = RepairStatus::CANCEL;
-
-
-        //当金额大于0时才需要推送
-        if($obj->quoted_price > 0){
-            $billObj = Bill::where('state',BillState::UNPAID)->where('other_no',$obj->repair_no)->find();
-            if($billObj){
-                app('kingdee_queue')->pushRepairCancel(['fid'=>$billObj->fid]);
-                $billObj->state = BillState::CLOSE;
-                $billObj->save();
-            }
-        }
-
-
-        return $obj->save();
+        $obj->save();
     }
 
     /**

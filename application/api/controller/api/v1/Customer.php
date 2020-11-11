@@ -73,7 +73,7 @@ class Customer
     public function addRepair(Request $request){
         $params = $request->post();
         $result = app('customer')->addRepair($params);
-        return show(201,$result,'add repair success');
+        return show(201,'','add repair success');
     }
 
     /**
@@ -148,8 +148,8 @@ class Customer
      */
     public function addFeedback(Request $request){
         $params = $request->post();
-        $result = app('customer')->addFeedback($params);
-        return show(201,$result,'add feedback success');
+        app('customer')->addFeedback($params);
+        return show(201,'','add feedback success');
     }
 
     /**

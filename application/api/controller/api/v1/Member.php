@@ -136,7 +136,7 @@ class Member
     public function getWXMPAuthorizeUrl(){
 //        $openID = Token::getCurrentWxOpenID($this->applicationId);
 //        $auth = cache($openID);
-        $mid = Token::getCurrentMID($this->applicationId);
+        $mid = Token::getCurrentMID($this->applicationID);
         return  app('member',['applicationID'=>$this->applicationID])->getWXMPAuthorizeUrl($mid);
     }
 
