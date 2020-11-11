@@ -55,7 +55,7 @@ class Member
         $wxLoginUrl = sprintf(config('wxmini.login_url'),$this->wxAppID,$this->wxAppSecret,$code);
         $res = http_request($wxLoginUrl);  //向微信服务器请求结果1:openID;2:session_key
         $wxResult = json_decode($res,true); //转为数组
-
+        dump($wxResult);die;
         //判断
         if(empty($wxResult)){
             throw new Exception('获取openid以及session_key异常，微信内部错误');
