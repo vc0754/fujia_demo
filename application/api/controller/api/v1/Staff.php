@@ -9,7 +9,6 @@
 namespace app\api\controller\api\v1;
 
 
-use app\lib\enum\ApplicationEnum;
 use app\lib\token\Token;
 use app\api\model\Staff as StaffModel;
 
@@ -24,9 +23,9 @@ class Staff
      * @throws \app\lib\exception\token\TokenException
      * @throws \think\Exception
      */
-    public function getMyStaffInfo(){
+    public function getMyInfo(){
 
-        $openid = Token::getCurrentWxOpenID(ApplicationEnum::DINNING);
+        $openid = Token::getCurrentWxOpenID();
         $staffID = cache($openid)['staff_id'];
         $staff = StaffModel::get($staffID);
         return show(200,$staff);

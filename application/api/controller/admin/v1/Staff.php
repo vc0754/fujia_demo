@@ -8,12 +8,14 @@
 
 namespace app\api\controller\admin\v1;
 
-use app\api\model\DinningBalanceLog;
 use app\api\model\Staff as M;
 use app\api\model\StaffGroup;
+use app\lib\enum\StaffState;
 use app\lib\exception\common\HandleException;
 use app\lib\exception\common\ParameterException;
 use think\db\exception\ModelNotFoundException;
+use think\facade\Cache;
+use app\api\model\Member as MemberModel;
 use think\Request;
 
 /**
@@ -93,21 +95,6 @@ class Staff
         return show(201,"","操作成功");
     }
 
-    /**
-     * 设为管理员或取消管理员
-     * @param Request $request
-     * @auth('管理员设置','员工管理')
-     */
-    public function setAdmin(Request $request){
-        $data = $request->put();
-        $staff = M::where('id',input('id'))->find();
-        if ($staff == null){
-            throw new ModelNotFoundException('找不到指定员工');
-        }
-        $staff->save(['dinning_role'=> $data["dinning_role"]]);
-        return show(200,"","操作成功");
-    }
-
 
     /**
      * 设为员工在职或离职
@@ -118,7 +105,15 @@ class Staff
         $data = $request->put();
         $staff = M::where('id',input('id'))->find();
         if ($staff == null){
-            throw new ModelNotFoundException('找不到指定员工');
+            throw new ParameterException([
+                'msg' => '找不到员工'
+            ]);
+        }
+        if($data['status'] == StaffState::Leave){
+           $members =  MemberModel::where('mobile',$staff->mobile)->select();
+           foreach ($members as $member){
+               Cache::rm($member->minipro_openid);
+           }
         }
         $staff->save(['status'=> $data["status"]]);
         return show(200,"","操作成功");
@@ -135,39 +130,19 @@ class Staff
     public function deleteStaff(){
         $staff = M::where('id',input('id'))->find();
         if ($staff == null){
-            throw new ModelNotFoundException('找不到指定员工');
+            throw new ParameterException([
+                'msg'=>'找不到指定员工'
+            ]);
+        }
+        $members =  MemberModel::where('mobile',$staff->mobile)->select();
+        foreach ($members as $member){
+            Cache::rm($member->minipro_openid);
         }
         $staff->delete();
         return show(200,"","操作成功");
     }
 
-    /**
-     * 获取员工余额消费记录
-     * @param Request $request
-     * @param int $page
-     * @param int $size
-     * @return \think\response\Json
-     * @auth('员工余额消费记录','员工管理')
-     */
-    public function getBalanceLog(Request $request,$page = 1,$size = 15){
-        $params = $request->get();
 
-        $staff_id = input('staff_id','');
-        $type = input('type','');
-
-        if($staff_id == ''){
-            throw new ParameterException();
-        }
-
-        $filter[] = ['staff_id','=',$staff_id];
-        if ($type != ''){
-            $filter[] = ['type','=',$type];
-        }
-
-        $result = DinningBalanceLog::where($filter)->order('create_time','desc')->paginate($size,false,['page'=>$page]);
-
-        return show(200,$result,"操作成功");
-    }
 
     /**
      * 添加员工分组

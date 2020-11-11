@@ -63,8 +63,7 @@ Route::group('', function () {
                 Route::get('wxmp_authorize_url', 'api/api.v1.Member/getWXMPAuthorizeUrl');
                 //检测是否关注公众号
                 Route::get('check_attention', 'api/api.v1.Member/checkAuthorizeAttention');
-                // 获取员工信息
-                //Route::get('staff','api/api.v1.Member/getStaffInfo');
+                
             })->middleware(['AppRoute','AppAuth']);
         });
     });

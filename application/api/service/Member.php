@@ -12,13 +12,11 @@ namespace app\api\service;
 
 use app\api\model\Customer as CustomerModel;
 use app\api\model\MemberPhone;
-use app\api\model\Staff as StaffModel;
 use app\api\model\Staff;
 use app\api\model\WechatFans;
 use app\lib\enum\AppAuthEnum;
 use app\lib\enum\ApplicationEnum;
 use app\lib\enum\AttentionStatus;
-use app\lib\enum\DinningAuthEnum;
 use app\lib\enum\StaffState;
 use app\lib\exception\api\WeChatException;
 use app\lib\exception\common\AuthActionException;
@@ -351,7 +349,7 @@ class Member
             $output['customer_id'] = $customer->id;
         }
 
-        $staff = Staff::where('mobile',$mobile)->find();
+        $staff = Staff::where('mobile',$mobile)->where('status',StaffState::OnTheJob)->find();
         if($staff){
             $auth = $auth + AppAuthEnum::Staff;
             $authList[] = AppAuthEnum::Staff;

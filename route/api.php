@@ -98,19 +98,6 @@ Route::group('', function () {
             });
 
 
-            //region 维修人员
-            Route::group('maintainer',function (){
-                //获取报修事务列表
-                Route::get('repair/:status','api/api.v1.Maintainer/getRepairList');
-                //报价
-                Route::put('repair/quotedPrice','api/api.v1.Maintainer/quotedPrice');
-                //完成报修
-                Route::put('repair/complete','api/api.v1.Maintainer/completeRepair');
-                //获取报修信息详情
-                Route::get('repair/detail/:id','api/api.v1.Maintainer/getRepairDetail');
-
-            });
-            //endregion
 
             //支付
             Route::post('pay', 'api/api.v1.Pay/pay');
@@ -125,7 +112,15 @@ Route::group('', function () {
                 //根据ID 获取文章
                 Route::get('get_article/:id', 'api/api.v1.Article/getArticleByID');
             });
+
+            // 获取员工信息
+            Route::group('staff',function(){
+                Route::get('','api/api.v1.Staff/getMyInfo');
+            });
+
         });
+
+
 
     })->middleware(['AppAuth:fu_jia']);
 })->middleware(['ReflexValidate'])->allowCrossDomain();//->domain('api');
